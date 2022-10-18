@@ -40,6 +40,7 @@ header h1, .conteudo p{
   animation: topdown;
   animation-duration: 1.3s; 
   animation-delay: 200ms;
+  animation-fill-mode: backwards;
 }
 
 header img {
@@ -47,6 +48,7 @@ header img {
   animation-duration: 1s;
   animation-delay: 200ms;
   animation-timing-function: linear;
+  animation-fill-mode: backwards;
  
 
 }
@@ -100,17 +102,11 @@ header h1 {
   position: relative;
   animation: topup;
   animation-duration: 1.3s;
-  animation-delay: 200ms;
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
   transition: transform 300ms;
+
  
-
-}
-
-.sorvetes:hover {
-  transition: transform 300ms;
-  transform: scale(1.05);
-  
-  
 
 }
 
@@ -118,6 +114,11 @@ header h1 {
   0% {
     opacity: 0;
     transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 
 
@@ -128,10 +129,24 @@ header h1 {
     transform: translateY(-20px);
   }
 
+  100%{
+    opacity: 1; 
+    transform: translateY(0);
 
+  }
 
 
 }
+
+
+.sorvetes:hover {
+  transition: transform 300ms;
+  transform: scale(1.05);
+  
+  
+
+}
+
 
 .sorvetes h2 {
   position: absolute;
