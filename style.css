@@ -54,16 +54,6 @@ header img {
 
 }
 
-@keyframes zoom {
-  0% {
-    transform: scale(0.8);
-  }
-
-
- 100% {
-    transform: scale(1.0);
-  }
-}
 
 
 header h1 {
@@ -74,11 +64,11 @@ header h1 {
   font-size: 4rem;
   line-height: 3.4rem;
   background-color: var(--color-pink);
-
+  
   letter-spacing: 0.05em;
-
+  
   color: #FFFFFF;
-
+  
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -95,7 +85,7 @@ header h1 {
   color: #23053A;
   text-align: center;
   margin: 1.4rem auto 6.3rem;
- 
+  
 }
 
 .sorvetes {
@@ -107,9 +97,19 @@ header h1 {
   animation-fill-mode: backwards;
   transition: transform 300ms;
 
- 
-
 }
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.8);
+  }
+
+
+ 100% {
+    transform: scale(1.0);
+  }
+}
+
 
 @keyframes topup {
   0% {
