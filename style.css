@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-purple: #4A4E69;
+  --color-azulbb: #8E9AAF;
+  --color-pink: #CBC0D3;
+  --color-pinkclear: #FEEAFA;
+  --color-cinzaclear: #EFF1FF;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Staatliches', cursive;
+  max-width: 38.5rem;
+  margin: auto;
+}
+
+.conteudo {
+margin: 0 3.2rem;
+
+}
+
+header {
+  background-color: var(--color-azulbb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 3.2rem 0 2.9rem;
+
+
+}
+
+header h1, .conteudo p{
+  animation: topdown;
+  animation-duration: 1.3s; 
+  animation-delay: 200ms;
+}
+
+header img {
+  animation: zoom;
+  animation-duration: 1s;
+  animation-delay: 200ms;
+  animation-timing-function: linear;
+ 
+
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+  }
+
+
+  to {
+    transform: scale(1.0);
+  }
+}
+
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  background-color: var(--color-pink);
+
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+.conteudo p {
+  font-family: 'Palanquin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #23053A;
+  text-align: center;
+  margin: 1.4rem auto 6.3rem;
+ 
+}
+
+.sorvetes {
+  border-radius: 2rem;
+  position: relative;
+  animation: topup;
+  animation-duration: 1.3s;
+  animation-delay: 200ms;
+  transition: transform 300ms;
+ 
+
+}
+
+.sorvetes:hover {
+  transition: transform 300ms;
+  transform: scale(1.05);
+  
+  
+
+}
+
+@keyframes topup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+
+}
+@keyframes topdown {
+  0% {
+    opacity: 0; 
+    transform: translateY(-20px);
+  }
+
+
+
+
+}
+
+.sorvetes h2 {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+  background-color: var(--color-pinkclear);
+  color: #23053A;
+  font-size: 2rem;
+  border-radius: 2rem;
+  width: 11.2rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ letter-spacing: 0.0rem;
+ font-weight: 400;
+ font-style: normal;
+  
+}
+
+.conteudo div + div {
+  margin-top: 3.6rem;
+}
+.conteudo div:last-child {
+  margin-bottom: 6rem
+}
