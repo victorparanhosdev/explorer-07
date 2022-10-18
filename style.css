@@ -13,16 +13,12 @@
   font-size: 62.5%;
 }
 
+
+
 body {
   font-size: 1.6rem;
   font-family: 'Staatliches', cursive;
-  max-width: 38.5rem;
-  margin: auto;
-}
-
-.conteudo {
-margin: 0 3.2rem;
-
+  
 }
 
 header {
@@ -33,7 +29,7 @@ header {
   gap: 3.2rem;
   padding: 3.2rem 0 2.9rem;
 
-
+  
 }
 
 header h1, .conteudo p{
@@ -50,10 +46,9 @@ header img {
   animation-timing-function: linear;
   animation-fill-mode: backwards;
   
- 
-
+  
+  
 }
-
 
 
 header h1 {
@@ -75,7 +70,6 @@ header h1 {
 
 
 
-
 .conteudo p {
   font-family: 'Palanquin', sans-serif;
   font-style: normal;
@@ -88,14 +82,23 @@ header h1 {
   
 }
 
+.sorvetes img {
+  width: 100%;
+  display: block;
+
+}
+
 .sorvetes {
-  border-radius: 2rem;
   position: relative;
+  border-radius: 2rem;
+  width: fit-content;
+  
   animation: topup;
   animation-duration: 1.3s;
   animation-delay: 400ms;
   animation-fill-mode: backwards;
   transition: transform 300ms;
+
 
 }
 
@@ -175,3 +178,100 @@ header h1 {
 .conteudo div:last-child {
   margin-bottom: 6rem
 }
+
+.conteudo {
+  display: grid;
+  place-items: center;
+  margin: 0 3.2rem;
+}
+footer, header p {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  .page {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10rem;
+
+  }
+
+  header {
+    width: 38rem;
+
+  }
+
+  .conteudo p {
+    display: none;
+  }
+
+ footer, header p {
+  display: block;
+ }
+
+ header h1 {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ header p {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: center;
+  max-width: 275px;
+  margin: auto;
+ }
+
+ footer p {
+  margin-top: 5rem;
+  text-align: center;
+ }
+
+ .conteudo {
+  display: grid;
+  gap: 3.2rem;
+  align-content: flex-start;
+  grid-template-areas: "A C B" "E D F";
+ }
+
+ .sorvetes h2 {
+  display: none;
+ }
+.conteudo div:nth-child(2){
+  grid-area: A;
+ 
+}
+
+.conteudo div:nth-child(3){
+  grid-area: B;
+  
+}
+.conteudo div:nth-child(4){
+  grid-area: C;
+  
+}
+.conteudo div:nth-child(5){
+  grid-area: D;
+}
+.conteudo div:nth-child(6){
+  grid-area: E;
+  
+}
+.conteudo div:last-child{
+  grid-area: F;
+  margin: 0;
+  
+}
+.conteudo div + div{
+  margin: 0;
+}
+
+
+
+}
+
