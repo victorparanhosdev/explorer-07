@@ -32,7 +32,7 @@ header {
 }
 
 header h1,
-.main p {
+.conteudo p {
   animation: topdown;
   animation-duration: 1.3s;
   animation-delay: 200ms;
@@ -76,7 +76,7 @@ header h1 {
 
 
 
-main p {
+.conteudo p {
   font-family: 'Palanquin', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -90,7 +90,6 @@ main p {
 
 .sorvetes img {
   width: 100%;
-  display: block;
   height: auto;
   object-fit: cover;
 
@@ -181,21 +180,22 @@ main p {
 
 }
 
-main div+div {
+.conteudo div+div {
   margin-top: 3.6rem;
 }
 
-main div:last-child {
+.conteudo div:last-child {
   margin-bottom: 6rem
 }
 
-main {
+.conteudo {
   max-width: 32rem;
   margin: auto;
+
 }
 
 
-footer, header p {
+footer p, header p {
   display: none;
 }
 
@@ -204,11 +204,16 @@ footer, header p {
 @media (min-width: 1280px) {
 
   body {
+    width: 100vw;
+    min-height: 72rem;
     display: flex;
+    justify-content: center; 
+  
   }
 
   header {
-    max-width: 38rem;
+    width: 38rem;
+    margin-right: 10rem;
 
   }
 
@@ -216,30 +221,35 @@ footer, header p {
     height: 7rem;
   }
 
-  main p {
+  .conteudo p {
     display: none;
   }
 
-  main {
-   width: 72.5rem;
-   display: grid;
-   grid-template-areas: "A B C" "D E F";
+
+  .conteudo {
+    max-width: 100%;
+    display: grid;
+    gap:3.2rem;
+    grid-template-areas: "A B C" "D E F";
+    
   }
 
-  main div:last-child,
-  main div+div {
+  .sorvetes img {
+    width: fit-content;
+    border: 1px solid red;
+  }
+
+  .conteudo div:last-child,
+  .conteudo div+div {
     margin: 0;
 
   }
 
-  footer,
+  footer p,
   header p {
     display: block;
   }
 
-  .sorvetes img {
-    width: auto;
-  }
   header p {
     color: #FFFFFF;
     font-family: 'Roboto';
@@ -252,10 +262,10 @@ footer, header p {
   }
 
   footer p {
-    margin-top: 5rem;
+    padding: 5rem 0;
     text-align: center;
     color: black;
-    border: 1px solid;
+
   }
 
   .sorvetes h2 {
