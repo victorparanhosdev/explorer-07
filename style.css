@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --color-purple: #4A4E69;
   --color-azulbb: #8E9AAF;
@@ -16,25 +17,24 @@
 
 
 body {
+
   font-size: 1.6rem;
   font-family: 'Staatliches', cursive;
-  
+
 }
 
 header {
   background-color: var(--color-azulbb);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3.2rem;
+  text-align: center;
   padding: 3.2rem 0 2.9rem;
+ 
 
-  
 }
 
-header h1, .conteudo p{
+header h1,
+.main p {
   animation: topdown;
-  animation-duration: 1.3s; 
+  animation-duration: 1.3s;
   animation-delay: 200ms;
   animation-fill-mode: backwards;
 }
@@ -45,32 +45,38 @@ header img {
   animation-delay: 200ms;
   animation-timing-function: linear;
   animation-fill-mode: backwards;
-  
-  
-  
+  margin-bottom: 3.2rem;
+
+
+
+
 }
 
 
 header h1 {
   width: 100%;
-  text-align: center;
+
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
   line-height: 3.4rem;
   background-color: var(--color-pink);
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+
   letter-spacing: 0.05em;
-  
+
   color: #FFFFFF;
-  
+
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 
 
 
-.conteudo p {
+main p {
   font-family: 'Palanquin', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -79,20 +85,22 @@ header h1 {
   color: #23053A;
   text-align: center;
   margin: 1.4rem auto 6.3rem;
-  
+
 }
 
 .sorvetes img {
   width: 100%;
   display: block;
+  height: auto;
+  object-fit: cover;
+
 
 }
 
 .sorvetes {
   position: relative;
   border-radius: 2rem;
-  width: fit-content;
-  
+
   animation: topup;
   animation-duration: 1.3s;
   animation-delay: 400ms;
@@ -108,7 +116,7 @@ header h1 {
   }
 
 
- 100% {
+  100% {
     transform: scale(1.0);
   }
 }
@@ -119,7 +127,7 @@ header h1 {
     opacity: 0;
     transform: translateY(20px);
   }
-  
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -128,14 +136,15 @@ header h1 {
 
 
 }
+
 @keyframes topdown {
   0% {
-    opacity: 0; 
+    opacity: 0;
     transform: translateY(-20px);
   }
 
-  100%{
-    opacity: 1; 
+  100% {
+    opacity: 1;
     transform: translateY(0);
 
   }
@@ -147,8 +156,8 @@ header h1 {
 .sorvetes:hover {
   transition: transform 300ms;
   transform: scale(1.05);
-  
-  
+
+
 
 }
 
@@ -166,112 +175,93 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
- letter-spacing: 0.0rem;
- font-weight: 400;
- font-style: normal;
-  
+  letter-spacing: 0.0rem;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
-.conteudo div + div {
+main div+div {
   margin-top: 3.6rem;
 }
-.conteudo div:last-child {
+
+main div:last-child {
   margin-bottom: 6rem
 }
 
-.conteudo {
-  display: grid;
-  place-items: center;
-  margin: 0 3.2rem;
+main {
+  max-width: 32rem;
+  margin: auto;
 }
+
+
 footer, header p {
   display: none;
 }
 
-@media (min-width: 1024px) {
 
-  .page {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 10rem;
 
+@media (min-width: 1280px) {
+
+  body {
+    display: flex;
   }
 
   header {
-    width: 38rem;
+    max-width: 38rem;
 
   }
 
-  .conteudo p {
+  header h1 {
+    height: 7rem;
+  }
+
+  main p {
     display: none;
   }
 
- footer, header p {
-  display: block;
- }
+  main {
+   width: 72.5rem;
+   display: grid;
+   grid-template-areas: "A B C" "D E F";
+  }
 
- header h1 {
-  height: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
- header p {
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.4rem;
-  line-height: 2rem;
-  font-weight: 400;
-  text-align: center;
-  max-width: 275px;
-  margin: auto;
- }
+  main div:last-child,
+  main div+div {
+    margin: 0;
 
- footer p {
-  margin-top: 5rem;
-  text-align: center;
- }
+  }
 
- .conteudo {
-  display: grid;
-  gap: 3.2rem;
-  align-content: flex-start;
-  grid-template-areas: "A C B" "E D F";
- }
+  footer,
+  header p {
+    display: block;
+  }
 
- .sorvetes h2 {
-  display: none;
- }
-.conteudo div:nth-child(2){
-  grid-area: A;
- 
-}
-
-.conteudo div:nth-child(3){
-  grid-area: B;
+  .sorvetes img {
+    width: auto;
+  }
+  header p {
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 2.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 3.2rem 4.8rem 12.5rem 5.4rem;
   
-}
-.conteudo div:nth-child(4){
-  grid-area: C;
-  
-}
-.conteudo div:nth-child(5){
-  grid-area: D;
-}
-.conteudo div:nth-child(6){
-  grid-area: E;
-  
-}
-.conteudo div:last-child{
-  grid-area: F;
-  margin: 0;
-  
-}
-.conteudo div + div{
-  margin: 0;
-}
+  }
+
+  footer p {
+    margin-top: 5rem;
+    text-align: center;
+    color: black;
+    border: 1px solid;
+  }
+
+  .sorvetes h2 {
+    display: none;
+  }
 
 
 
 }
-
