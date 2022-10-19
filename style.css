@@ -19,7 +19,7 @@
 body {
 
   font-size: 1.6rem;
-  font-family: 'Staatliches', cursive;
+
 
 }
 
@@ -55,7 +55,7 @@ header img {
 
 header h1 {
   width: 100%;
-
+  font-family: 'Staatliches', cursive;
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -162,6 +162,7 @@ header h1 {
 
 
 .sorvetes h2 {
+  font-family: 'Staatliches', cursive;
   position: absolute;
   top: 1.8rem;
   right: 1.8rem;
@@ -202,18 +203,20 @@ footer p, header p {
 
 
 @media (min-width: 1280px) {
-
   body {
+    border: 1px solid red;
     width: 100vw;
-    min-height: 72rem;
-    display: flex;
-    justify-content: center; 
-  
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
   }
 
   header {
+   
+
     width: 38rem;
     margin-right: 10rem;
+    
 
   }
 
@@ -229,6 +232,7 @@ footer p, header p {
   .conteudo {
     max-width: 100%;
     display: grid;
+    align-items: end;
     gap:3.2rem;
     grid-template-areas: "A B C" "D E F";
     
@@ -236,7 +240,6 @@ footer p, header p {
 
   .sorvetes img {
     width: fit-content;
-    border: 1px solid red;
   }
 
   .conteudo div:last-child,
@@ -252,8 +255,8 @@ footer p, header p {
 
   header p {
     color: #FFFFFF;
-    font-family: 'Roboto';
-    font-size: 2.4rem;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 400;
     text-align: center;
@@ -262,9 +265,25 @@ footer p, header p {
   }
 
   footer p {
-    padding: 5rem 0;
+    padding-top: 5rem;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    
+    /* identical to box height, or 200% */
+    
     text-align: center;
-    color: black;
+    
+    color: #4A4E69;
+
+  }
+  footer p a {
+    color: #4A4E69;
+    text-decoration: none;
+    font-weight: 700;
+ 
 
   }
 
