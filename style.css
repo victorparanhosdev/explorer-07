@@ -92,6 +92,7 @@ header h1 {
   width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
 
 
 }
@@ -201,23 +202,33 @@ footer p, header p {
 }
 
 
+@media (min-width:768px){
+  .conteudo {
+    max-width: 60rem;
+  }
+}
 
 @media (min-width: 1280px) {
   body {
-    border: 1px solid red;
-    width: 100vw;
-    margin: auto;
+    
     display: grid;
-    grid-auto-flow: column;
+    grid-template-areas: "header main";
+
   }
 
   header {
+    grid-area: header;
+    width: 38rem;    
+
+  }
+
+
+
+  main {
+   padding: 6.4rem 8.1rem 4.6rem 9.8rem;
+
    
-
-    width: 38rem;
-    margin-right: 10rem;
-    
-
+    grid-area: main;
   }
 
   header h1 {
@@ -232,15 +243,44 @@ footer p, header p {
   .conteudo {
     max-width: 100%;
     display: grid;
-    align-items: end;
+   
     gap:3.2rem;
-    grid-template-areas: "A B C" "D E F";
+    
+    grid-template-areas: 
+    "A B C"
+    "D B F"
+    "D E F";
     
   }
 
-  .sorvetes img {
-    width: fit-content;
+  .conteudo div:nth-child(2) {
+    grid-area: A;
+ 
   }
+
+  .conteudo div:nth-child(3) {
+    grid-area: B;
+ 
+  }
+  .conteudo div:nth-child(4) {
+    grid-area: C;
+ 
+  }
+  .conteudo div:nth-child(5) {
+    grid-area: D;
+ 
+  }
+  .conteudo div:nth-child(6) {
+    grid-area: E;
+ 
+  }
+  .conteudo div:nth-child(7) {
+    grid-area: F;
+ 
+  }
+
+
+
 
   .conteudo div:last-child,
   .conteudo div+div {
@@ -265,7 +305,7 @@ footer p, header p {
   }
 
   footer p {
-    padding-top: 5rem;
+    margin-top: 5rem;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
