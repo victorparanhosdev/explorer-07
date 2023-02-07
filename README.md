@@ -1,6 +1,6 @@
 # Stade 03 - Grid with Animations
 
-### 🚀 Tecnologias
+### 🚀 Technologies
 
 
 This project was developed with the following technologies:
@@ -8,7 +8,7 @@ This project was developed with the following technologies:
 - HTML
 - CSS
 
-### 💻 Projeto
+### 💻 Project
 
 The challenge was developed with display grid operation and animations using keyframes.
 
@@ -18,4 +18,4 @@ The challenge was developed with display grid operation and animations using key
   <img alt="layout ice cream" src="assets/layout-version-desktop.png" width="100%" />
 </h1>
 
-Feito com ♥
+Done with ♥
