@@ -32,7 +32,7 @@ header {
 }
 
 header h1,
-.conteudo p {
+.content p {
   animation: topdown;
   animation-duration: 1.3s;
   animation-delay: 200ms;
@@ -76,7 +76,7 @@ header h1 {
 
 
 
-.conteudo p {
+.content p {
   font-family: 'Palanquin', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -88,7 +88,7 @@ header h1 {
 
 }
 
-.sorvetes img {
+.ice-cream img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -97,7 +97,7 @@ header h1 {
 
 }
 
-.sorvetes {
+.ice-cream {
   position: relative;
   border-radius: 2rem;
 
@@ -153,7 +153,7 @@ header h1 {
 }
 
 
-.sorvetes:hover {
+.ice-cream:hover {
   transition: transform 300ms;
   transform: scale(1.05);
 
@@ -162,7 +162,7 @@ header h1 {
 }
 
 
-.sorvetes h2 {
+.ice-cream h2 {
   font-family: 'Staatliches', cursive;
   position: absolute;
   top: 1.8rem;
@@ -182,15 +182,15 @@ header h1 {
 
 }
 
-.conteudo div+div {
+.content div+div {
   margin-top: 3.6rem;
 }
 
-.conteudo div:last-child {
+.content div:last-child {
   margin-bottom: 6rem
 }
 
-.conteudo {
+.content {
   max-width: 32rem;
   margin: auto;
 
@@ -203,7 +203,7 @@ footer p, header p {
 
 
 @media (min-width:768px){
-  .conteudo {
+  .content {
     max-width: 60rem;
   }
 }
@@ -236,12 +236,12 @@ footer p, header p {
     height: 7rem;
   }
 
-  .conteudo p {
+  .content p {
     display: none;
   }
 
 
-  .conteudo {
+  .content {
     padding-top: 6.4rem;
     padding-right: 8.1rem;
    
@@ -257,28 +257,28 @@ footer p, header p {
     
   }
 
-  .conteudo div:nth-child(2) {
+  .content div:nth-child(2) {
     grid-area: A;
  
   }
 
-  .conteudo div:nth-child(3) {
+  .content div:nth-child(3) {
     grid-area: B;
  
   }
-  .conteudo div:nth-child(4) {
+  .content div:nth-child(4) {
     grid-area: C;
  
   }
-  .conteudo div:nth-child(5) {
+  .content div:nth-child(5) {
     grid-area: D;
  
   }
-  .conteudo div:nth-child(6) {
+  .content div:nth-child(6) {
     grid-area: E;
  
   }
-  .conteudo div:nth-child(7) {
+  .content div:nth-child(7) {
     grid-area: F;
  
   }
@@ -286,8 +286,8 @@ footer p, header p {
 
 
 
-  .conteudo div:last-child,
-  .conteudo div+div {
+  .content div:last-child,
+  .content div+div {
     margin: 0;
 
   }
@@ -332,13 +332,13 @@ footer p, header p {
 
   }
 
-  .sorvetes h2 {
+  .ice-cream h2 {
     display: none;
   }
 
 @media (min-width: 1600px){
 
-  .conteudo {
+  .content {
      
       max-width: 88.2rem;
     
